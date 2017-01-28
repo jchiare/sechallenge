@@ -1,8 +1,10 @@
 from django.conf.urls import url
+from .views import NameList
 from . import views
 
-app_name = 'expense'
 urlpatterns = [
     # expense/
-    url(r'^$', views.mainpage, name = 'mainpage'),
+    url(r'^$', NameList.as_view(), name = 'list'),
+    url(r'^success$', views.ImportCsv, name='success'),
+    url(r'^table$', views.Table, name='table'),
 ]

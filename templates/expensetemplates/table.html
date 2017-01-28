@@ -1,0 +1,11 @@
+{% extends 'expensetemplates/base.html' %}
+
+{% block content %}
+
+    {% for key, value in contextt.items %}
+        <p> Month: {{key}}  Total Expenses: $ {{value}}</p>
+
+
+    {% endfor %}
+
+{% endblock %}

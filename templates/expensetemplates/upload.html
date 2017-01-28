@@ -2,12 +2,12 @@
 
 {% block content %}
 
-    <form action="#" method="POST">
+    <form method="post" action="{% url 'success' %}" enctype="multipart/form-data">
         {% csrf_token %}
-            <h1>Expense Uploader</h1>
-            <p class="lead">Enter a CSV file containing the date, category, employee name, employee address, expense description, pre-tax amount, tax name, and tax amount</p>
-            <input type="file" accept=".csv, text/csv" name="file">
-            <input type="submit" value="Upload" class="btn btn-lg btn-success">
+        <h1>Expense Uploader</h1>
+        <p class="lead">Enter a CSV file containing the date, category, employee name, employee address, expense description, pre-tax amount, tax name, and tax amount</p>
+        <input type="file" name="CSV" accept="text/csv,.csv" class="middle-button"/>
+        <input type="submit" value="Save" class="btn btn-lg btn-success"/>
     </form>
 
 {% endblock %}

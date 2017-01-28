@@ -1,19 +1,27 @@
 import csv
-from .forms import ItemModelForm
+from .models import Name
+import io
 
+def CSVopener(file):
+    new_file = io.StringIO(file.read().decode('utf-8')) # (mostly) black magic
 
-def import_csv(filename):
-    rows = open(filename)
+    with new_file as f:
+        reader = csv.reader(f)
+        next(reader,None)
 
-    # Generate a dict per row, with the first CSV row being the keys.
-    for row in csv.DictReader(rows, delimiter=","):
-
-        # Bind the row data to the ItemModelForm
-        form = ItemModelForm(row)
-        if form.is_valid():
-            model_instance = form.save()
-            model_instance.save()
-        else:
-            pass
+        for row in reader:
+            date_seperator = row[0].split('/') # horrible hack to let model.datefield work
+            Name.objects.create(
+                date= date_seperator[2] + "-" + date_seperator[0] + "-01",
+                category=row[1],
+                employee_name=row[2],
+                employee_address= row[3],
+                expense_description= row[4],
+                pre_tax_amount= row[5].replace(",",""), # fuck commas
+                tax_name= row[6],
+                tax_amount= row[7].replace(",",""),
+            )
 
     return
+
+

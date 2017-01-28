@@ -1,11 +1,22 @@
 from django.shortcuts import render
-from .models import Item
-from .CSV_import import import_csv
-# Create your views here.
+from django.views.generic import ListView
+from .models import Name
+from .CSV_import import CSVopener
+from django.http import HttpResponseRedirect, HttpRequest
+from .table_creater import build_table
 
-def mainpage(request):
-    if request.method == 'POST':
-        import_csv(request.FILES['file'])
+
+class NameList(ListView):
+    queryset = Name.objects.all()
+    template_name = 'expensetemplates/upload.html'
+
+def ImportCsv(request):
+    if request.method == "POST":
+        CSVopener(request.FILES['CSV'])
+        return HttpResponseRedirect('/expense/table')
     else:
-        pass
-    return render(request, 'expensetemplates/upload.html')
+        return HttpRequest("Nope")
+
+def Table(request):
+    context = build_table()
+    return render(request,'expensetemplates/table.html',{'contextt': context})
