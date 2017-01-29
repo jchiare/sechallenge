@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6122dc91-80a2-4caa-bca4-d7613adc21c1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/expensesite/table_creater.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expensesite/CSV_import.py" afterPath="$PROJECT_DIR$/expensesite/CSV_import.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expensesite/admin.py" afterPath="$PROJECT_DIR$/expensesite/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expensesite/models.py" afterPath="$PROJECT_DIR$/expensesite/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expensesite/urls.py" afterPath="$PROJECT_DIR$/expensesite/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/expensesite/views.py" afterPath="$PROJECT_DIR$/expensesite/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/expensetemplates/table.html" afterPath="$PROJECT_DIR$/templates/expensetemplates/table.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,18 +24,18 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expensesite/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="180">
+              <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSV_import.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CSV_import.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expensesite/CSV_import.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="630">
+              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -59,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/expensesite/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
@@ -91,10 +87,10 @@
       <list>
         <option value="$PROJECT_DIR$/expensesite/admin.py" />
         <option value="$PROJECT_DIR$/expensesite/urls.py" />
-        <option value="$PROJECT_DIR$/expensesite/views.py" />
-        <option value="$PROJECT_DIR$/expensesite/models.py" />
         <option value="$PROJECT_DIR$/templates/expensetemplates/table.html" />
         <option value="$PROJECT_DIR$/expensesite/CSV_import.py" />
+        <option value="$PROJECT_DIR$/expensesite/models.py" />
+        <option value="$PROJECT_DIR$/expensesite/views.py" />
       </list>
     </option>
   </component>
@@ -521,16 +517,8 @@
         <state relative-caret-position="60">
           <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expensesite/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -542,12 +530,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expensesite/views.py">
+    <entry file="file://$PROJECT_DIR$/expensesite/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expensesite/CSV_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
-            <element signature="e#0#55#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -562,12 +558,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expensesite/CSV_import.py">
+    <entry file="file://$PROJECT_DIR$/expensesite/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="31" lean-forward="false" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#55#0" expanded="true" />
           </folding>
         </state>
       </provider>

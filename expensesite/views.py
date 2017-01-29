@@ -17,4 +17,3 @@ def ImportCsv(request):
         return HttpResponseRedirect('/expense/table')
     else:
         return HttpRequest("Nope")
-

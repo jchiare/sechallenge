@@ -19,8 +19,18 @@ def CSVopener(file):
             row[7] = row[7].replace(",","")
             item_total = Decimal(row[5]) + Decimal(row[7])
 
+            # create MonthlyExpense object or add amount to monthly total
+            instance, month_does_not_exist = MonthlyExpense.objects.get_or_create(year_month=item_date)
+            if month_does_not_exist:
+                instance.monthly_total = item_total
+                instance.save()
+            else:
+                instance.monthly_total += item_total
+                instance.save()
+
             # create Name object
             Name.objects.create(
+                monthlyexpense = MonthlyExpense(pk=instance.id),
                 date= item_date + "-01",
                 category=row[1],
                 employee_name=row[2],
@@ -31,15 +41,4 @@ def CSVopener(file):
                 tax_amount= row[7],
             )
 
-            # create MonthlyExpense object or add amount to monthly total
-            instance, month_does_not_exist = MonthlyExpense.objects.get_or_create(year_month=item_date)
-            if month_does_not_exist:
-                instance.monthly_total = item_total
-                instance.save()
-            else:
-                instance.monthly_total += item_total
-                instance.save()
-
     return
-
-
