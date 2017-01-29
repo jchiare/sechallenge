@@ -2,10 +2,8 @@
 
 {% block content %}
 
-    {% for key, value in contextt.items %}
-        <p> Month: {{key}}  Total Expenses: $ {{value}}</p>
-
-
+    {% for monthly_expense in object_list%}
+        <p> Month: {{monthly_expense.year_month}}  Total Expenses: $ {{monthly_expense.monthly_total}}</p>
     {% endfor %}
 
 {% endblock %}

@@ -8,10 +8,16 @@ class Name(models.Model):
     employee_name = models.CharField(max_length = 50,default='')
     employee_address = models.CharField(max_length = 200,default='')
     expense_description = models.CharField(max_length = 200,default='')
-    pre_tax_amount = models.DecimalField(max_digits = 20, decimal_places = 2,default=0)
+    pre_tax_amount = models.DecimalField(max_digits = 20, decimal_places = 2,null=True)
     tax_name = models.CharField(max_length = 30,default='')
-    tax_amount = models.DecimalField(max_digits = 10, decimal_places = 2,default=0)
+    tax_amount = models.DecimalField(max_digits = 10, decimal_places = 2,null=True)
 
     def __str__(self):
         return self.employee_name
 
+class MonthlyExpense(models.Model):
+    year_month = models.CharField(max_length=7,default='')
+    monthly_total = models.DecimalField(max_digits = 20, decimal_places = 2,null=True)
+
+    def  __str__(self):
+        return self.year_month
